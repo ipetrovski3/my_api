@@ -1,0 +1,136 @@
+---
+require:
+  - rubocop-performance
+  - rubocop-rake
+  - rubocop-rails
+  - rubocop-thread_safety
+
+AllCops:
+  TargetRubyVersion: 2.6
+
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  Exclude:
+    - app/controllers/api_maker/devise_controller.rb
+    - api_maker/lib/**/*
+    - api_maker/spec/**/*
+    - bin/**/*
+    - db/data_schema.rb
+    - db/schema.rb
+    - docs/**/*
+    - log/**/*
+    - node_modules/**/*
+    - public/**/*
+    - spec/dummy/db/schema.rb
+    - spec/fixtures/vcr_cassettes/**/*
+    - storage/**/*
+    - tmp/**/*
+
+Layout/AccessModifierIndentation:
+  EnforcedStyle: outdent
+
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/EmptyLines:
+  Enabled: false
+
+Layout/EmptyLinesAroundArguments:
+  Enabled: false
+
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/ClassLength:
+  Max: 120
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Metrics/PerceivedComplexity:
+  Max: 10
+
+# Metrics/Layout:
+#   Max: 160
+
+Metrics/MethodLength:
+  Max: 50
+
+Metrics/ParameterLists:
+  Max: 10
+
+Rails/ApplicationController:
+  Enabled: false
+
+Rails/FilePath:
+  EnforcedStyle: arguments
+
+# .find_each is not the same as .each
+Rails/FindEach:
+  Enabled: false
+
+Rails/RakeEnvironment:
+  Enabled: false
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+    - staging
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: nested
+
+Style/ConditionalAssignment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+# Will report offences for many places that are much more readable without using a guard clause
+Style/GuardClause:
+  Enabled: false
+
+Style/LambdaCall:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
+Style/NilComparison:
+  Enabled: false
+
+Style/SignalException:
+  EnforcedStyle: only_raise
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/TrivialAccessors:
+  ExactNameMatch: true
+  Enabled: true

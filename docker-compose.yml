@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  postgresserver:
+    image: postgis/postgis:11-3.0
+    environment:
+      POSTGRES_USER: recruitment-rails
+      POSTGRES_PASSWORD: dockerized
+    ports:
+      - "5432:5432"
