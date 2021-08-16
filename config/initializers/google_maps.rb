@@ -2,5 +2,5 @@
 
 Google::Maps.configure do |config|
   config.authentication_mode = Google::Maps::Configuration::API_KEY
-  config.api_key = 'AIzaSyBUt9hd__0_Bws1JdXmuoNXqpQSdiFyGHk'
+  config.api_key = ENV['GOOGLE_API_KEY']
 end
